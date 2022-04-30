@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Task Management</string>
+    <array name="taskPeriority">
+        <item>Select task Priority</item>
+        <item>High</item>
+        <item>Normal</item>
+        <item>Low</item>
+    </array>
+</resources>
