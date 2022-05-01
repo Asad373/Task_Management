@@ -25,6 +25,7 @@ public class Login extends BaseClass implements View.OnClickListener {
         setContentView(binding.getRoot());
         binding.signUp.setOnClickListener(this);
         binding.btnLogin.setOnClickListener(this);
+        binding.forgot.setOnClickListener(this);
     }
 
     @Override
@@ -37,8 +38,15 @@ public class Login extends BaseClass implements View.OnClickListener {
             case R.id.btnLogin:
                 ValidateUser();
                 break;
+            case R.id.forgot:
+                loadForgotPass();
+                break;
 
         }
+    }
+
+    private void loadForgotPass() {
+        startActivity(new Intent(Login.this, ForgotPassword.class));
     }
 
 

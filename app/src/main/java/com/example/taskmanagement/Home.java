@@ -159,7 +159,7 @@ public class Home extends BaseClass implements View.OnClickListener{
     }
 
     private void SignOutuser() {
-       mAuth.signOut();
+       //mAuth.signOut();
        signUpSuccesMessage("Are you sure to logout?");
     }
 
@@ -188,6 +188,7 @@ public class Home extends BaseClass implements View.OnClickListener{
                             @Override
                             public void onClick(DialogInterface dialog,
                                                 int which) {
+                                mAuth.signOut();
                                 Intent intent = new Intent(getApplicationContext(), Login.class);
                                 startActivity(intent);
                                 finish();
